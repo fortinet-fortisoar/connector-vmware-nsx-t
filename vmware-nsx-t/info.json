@@ -1,0 +1,1287 @@
+{
+  "name": "vmware-nsx-t",
+  "label": "VMware NSX-T",
+  "description": "VMware NSX-T Data Center focuses on providing networking, security, automation, and operational simplicity for emerging application frameworks and architectures that have heterogeneous endpoint environments and technology stacks. This Connector automated operations such as create, update and delete operation related to policy, rule, group etc.",
+  "publisher": "Community",
+  "cs_approved": false,
+  "cs_compatible": true,
+  "version": "1.0.0",
+  "category": "Firewall",
+  "help_online": "https://docs.fortinet.com/document/fortisoar/1.0.0/vmware-nsx-t/226/vmware-nsx-t-v1-0-0",
+  "icon_small_name": "small.png",
+  "icon_large_name": "large.png",
+  "configuration": {
+    "fields": [
+      {
+        "title": "Server URL",
+        "name": "server_url",
+        "type": "text",
+        "description": "The URL of the VMware NSX-T server to which you will connect and perform the automated operations.",
+        "required": true,
+        "editable": true,
+        "visible": true
+      },
+      {
+        "title": "Username",
+        "name": "username",
+        "type": "text",
+        "description": "The username used to access the VMware NSX-T server to which you will connect and perform the automated operations.",
+        "required": true,
+        "editable": true,
+        "visible": true
+      },
+      {
+        "title": "Password",
+        "name": "password",
+        "type": "password",
+        "description": "The password used to access the VMware NSX-T server to which you will connect and perform the automated operations.",
+        "required": true,
+        "editable": true,
+        "visible": true
+      },
+      {
+        "title": "Verify SSL",
+        "name": "verify_ssl",
+        "type": "checkbox",
+        "description": "Select this checkbox to verify the SSL server certificate.",
+        "required": false,
+        "editable": true,
+        "visible": true,
+        "value": true
+      }
+    ]
+  },
+  "operations": [
+    {
+      "operation": "get_security_policies_list",
+      "title": "Get Security Policies List",
+      "category": "investigation",
+      "annotation": "get_security_policies_list",
+      "description": "Retrieves a list of all the security policies for a specific domain from VMware NSX-T based on the domain ID and other input parameters you have specified.",
+      "parameters": [
+        {
+          "title": "Domain ID",
+          "name": "domain_id",
+          "type": "text",
+          "tooltip": "Specify the domain ID for which you want to retrieve the list of security policies.",
+          "description": "Specify the domain ID for which you want to retrieve the list of security policies.",
+          "required": true,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Include Delete Objects",
+          "name": "include_mark_for_delete_objects",
+          "type": "checkbox",
+          "tooltip": "Select this checkbox to include objects (resources) that are marked for deletion in the results of this operation.",
+          "description": "Select this checkbox to include objects (resources) that are marked for deletion in the results of this operation.",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "value": false
+        },
+        {
+          "title": "Include Rule Count",
+          "name": "include_rule_count",
+          "type": "checkbox",
+          "tooltip": "Select this checkbox to include the count of rules in the specified policy in the results of this operation, i.e., the rule_count field in the results gets populated with the count of rules in the particular policy.",
+          "description": "Select this checkbox to include the count of rules in the specified policy in the results of this operation, i.e., the rule_count field in the results gets populated with the count of rules in the particular policy.",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "value": false
+        },
+        {
+          "title": "Page Size",
+          "name": "page_size",
+          "type": "integer",
+          "tooltip": "The maximum number of results, per page, that this operation should return.",
+          "description": "(Optional) The maximum number of results, per page, that this operation should return.",
+          "required": false,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Sort by Field",
+          "name": "sort_by",
+          "type": "text",
+          "tooltip": "The name of the field based on which you want to sort the result.",
+          "description": "(Optional) The name of the field based on which you want to sort the result.",
+          "required": false,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Sort Ascending",
+          "name": "sort_ascending",
+          "type": "checkbox",
+          "tooltip": "Select this checkbox to sort the results of this operation in ascending order based on the field you have specified in the Sort By Field parameter.",
+          "description": "Select this checkbox to sort the results of this operation in ascending order based on the field you have specified in the Sort By Field parameter.",
+          "required": false,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Cursor",
+          "name": "cursor",
+          "type": "text",
+          "tooltip": "The opaque cursor to be used for getting the next page of records.",
+          "description": "(Optional) The opaque cursor to be used for getting the next page of records. ",
+          "required": false,
+          "editable": true,
+          "visible": true
+        }
+      ],
+      "enabled": true,
+      "output_schema": {
+        "sort_ascending": "",
+        "sort_by": "",
+        "result_count": "",
+        "results": [
+          {
+            "resource_type": "",
+            "id": "",
+            "display_name": "",
+            "path": "",
+            "parent_path": "",
+            "relative_path": "",
+            "sequence_number": "",
+            "internal_sequence_number": "",
+            "_create_user": "",
+            "_create_time": "",
+            "_last_modified_user": "",
+            "_last_modified_time": "",
+            "_system_owned": "",
+            "_protection": "",
+            "_revision": ""
+          }
+        ]
+      }
+    },
+    {
+      "operation": "get_security_policy_details",
+      "title": "Get Security Policy Details",
+      "category": "investigation",
+      "annotation": "get_security_policy_details",
+      "description": "Retrieves details of a specific security policy for a specific domain from VMware NSX-T based on the domain ID and policy ID you have specified.",
+      "parameters": [
+        {
+          "title": "Domain ID",
+          "name": "domain_id",
+          "type": "text",
+          "tooltip": "Specify the domain ID for which you want to retrieve the details of the specified security policy.",
+          "description": "Specify the domain ID for which you want to retrieve the details of the specified security policy.",
+          "required": true,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Policy ID",
+          "name": "policy_id",
+          "type": "text",
+          "tooltip": "Specify the ID of the policy whose details you want to retrieve from VMware NSX-T.",
+          "description": "Specify the ID of the policy whose details you want to retrieve from VMware NSX-T.",
+          "required": true,
+          "editable": true,
+          "visible": true
+        }
+      ],
+      "enabled": true,
+      "output_schema": {
+        "resource_type": "",
+        "description": "",
+        "id": "",
+        "display_name": "",
+        "path": "",
+        "parent_path": "",
+        "relative_path": "",
+        "rules": [
+          {
+            "resource_type": "",
+            "description": "",
+            "id": "",
+            "display_name": "",
+            "path": "",
+            "parent_path": "",
+            "relative_path": "",
+            "sequence_number": "",
+            "source_groups": [],
+            "logged": "",
+            "destination_groups": [
+            ],
+            "scope": [
+            ],
+            "action": "",
+            "services": [
+            ],
+            "_create_user": "",
+            "_create_time": "",
+            "_last_modified_user": "",
+            "_last_modified_time": "",
+            "_system_owned": "",
+            "_protection": "",
+            "_revision": ""
+          }
+        ],
+        "category": "",
+        "precedence": "",
+        "_create_user": "",
+        "_create_time": "",
+        "_last_modified_user": "",
+        "_last_modified_time": "",
+        "_system_owned": "",
+        "_protection": "",
+        "_revision": ""
+      }
+    },
+    {
+      "operation": "upsert_security_policy",
+      "title": "Upsert Security Policy",
+      "category": "miscellaneous",
+      "annotation": "upsert_security_policy",
+      "description": "Creates or Updates the security policy for the specified domain in VMware NSX-T based on the domain ID, policy ID, and other input parameters you have specified. If a security policy for the given security-policy-id is not present, then the security policy object gets created, and if it is present then the security policy object gets updated, i.e. it will get completely replaced.",
+      "parameters": [
+        {
+          "title": "Domain ID",
+          "name": "domain_id",
+          "type": "text",
+          "tooltip": "Specify the domain ID for which you want to create or update the specified security policy.",
+          "description": "Specify the domain ID for which you want to create or update the specified security policy.",
+          "required": true,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Policy ID",
+          "name": "policy_id",
+          "type": "text",
+          "tooltip": "Specify the ID of the security policy that you want to create or update for the specified domain.",
+          "description": "Specify the ID of the security policy that you want to create or update for the specified domain.",
+          "required": true,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Display Name",
+          "name": "display_name",
+          "type": "text",
+          "tooltip": "The name or identifier of the security policy that will be used to display this security policy in logs or GUI.",
+          "description": "(Optional) The name or identifier of the security policy that will be used to display this security policy in logs or GUI. ",
+          "required": false,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "text",
+          "tooltip": "The description of the security policy that you want to create or update for the specified domain.",
+          "description": "The description of the security policy that you want to create or update for the specified domain.",
+          "required": false,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Category",
+          "name": "category",
+          "type": "select",
+          "tooltip": "Policy framework provides five pre-defined categories for classifying a security policy. They are \"Ethernet\",\"Emergency\", \"Infrastructure\"\"Environment\" and \"Application\". There is a pre-determined order in which the policy framework manages the priority of these security policies. Ethernet category is for supporting layer 2 firewall rules. The other four categories are applicable for layer 3 rules. Amongst them, the Emergency category has the highest priority followed by Infrastructure, Environment and then Application rules. Administrator can choose to categorize a security policy into the above categories or can choose to leave it empty. If empty it will have the least precedence w.r.t the above four categories.",
+          "description": "The policy framework provides five pre-defined categories for classifying a security policy: \"Ethernet\", \"Emergency\", \"Infrastructure\", \"Environment\", and \"Application\". There is a pre-determined order in which the policy framework manages the priority of these security policies: The \"Ethernet\" category is for supporting layer 2 firewall rules. The other four categories are applicable for layer 3 rules. Amongst them, the \"Emergency\" category has the highest priority followed by \"Infrastructure\", \"Environment\", and then \"Application\". \n\nYou can choose to categorize the security policy into the available categories or can choose to leave it empty. If you leave it empty it will have the least precedence of the categories.",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "options": [
+            "Application",
+            "Ethernet",
+            "Emergency",
+            "Infrastructure",
+            "Environment"
+          ]
+        },
+        {
+          "title": "Comments",
+          "name": "comments",
+          "type": "text",
+          "tooltip": "The comments that you want to add for security policy lock or unlock.",
+          "description": "The comments that you want to add for security policy lock or unlock.",
+          "required": false,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Rules",
+          "name": "rules",
+          "type": "json",
+          "tooltip": "Specify an array of rules in the JSON format for the specified security policy.",
+          "description": "(Optional) Specify an array of rules in the JSON format for the specified security policy. ",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "value": {
+            "description": "comm map patched",
+            "display_name": "application-section-1",
+            "category": "Application",
+            "rules": [
+              {
+                "description": "description for rule",
+                "display_name": "rule name",
+                "sequence_number": 1,
+                "source_groups": [
+                  "/infra/domains/vmc/groups/dbgroup"
+                ],
+                "destination_groups": [
+                  "/infra/domains/vmc/groups/appgroup"
+                ],
+                "services": [
+                  "/infra/services/HTTP",
+                  "/infra/services/CIM-HTTP"
+                ],
+                "action": "ALLOW"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Additional Fields",
+          "name": "additional_field",
+          "type": "json",
+          "tooltip": "Specify any additional fields in the JSON format for the specified security policy.",
+          "description": "(Optional) Specify any additional fields in the JSON format for the specified security policy.",
+          "required": false,
+          "editable": true,
+          "visible": true
+        }
+      ],
+      "enabled": true,
+      "output_schema": {
+        "status": "",
+        "results": ""
+      }
+    },
+    {
+      "operation": "delete_security_policy",
+      "title": "Delete Security Policy",
+      "category": "miscellaneous",
+      "annotation": "delete_security_policy",
+      "description": "Deletes a specific security policy, along with all the rules, from the specified domain in VMware NSX-T based on the domain ID and policy ID you have specified.",
+      "parameters": [
+        {
+          "title": "Domain ID",
+          "name": "domain_id",
+          "type": "text",
+          "tooltip": "Specify the domain ID from which you want to delete the specified security policy.",
+          "description": "Specify the domain ID from which you want to delete the specified security policy.",
+          "required": true,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Policy ID",
+          "name": "policy_id",
+          "type": "text",
+          "tooltip": "Specify the ID of the security policy that you want to delete from the specified domain.",
+          "description": "Specify the ID of the security policy that you want to delete from the specified domain.",
+          "required": true,
+          "editable": true,
+          "visible": true
+        }
+      ],
+      "enabled": true,
+      "output_schema": {
+        "status": "",
+        "results": ""
+      }
+    },
+    {
+      "operation": "get_groups_list",
+      "title": "Get Groups List",
+      "category": "investigation",
+      "annotation": "get_groups_list",
+      "description": "List Groups for a domain. Groups can be filtered using member_types query parameter, which returns the groups that contains the specified member types.",
+      "parameters": [
+        {
+          "title": "Domain ID",
+          "name": "domain_id",
+          "type": "text",
+          "tooltip": "Specify the domain ID for which you want to retrieve the list of groups.",
+          "description": "Specify the domain ID for which you want to retrieve the list of groups.",
+          "required": true,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Include Delete Objects",
+          "name": "include_mark_for_delete_objects",
+          "type": "checkbox",
+          "tooltip": "Select this checkbox to include objects (resources) that are marked for deletion in the results of this operation.",
+          "description": "Select this checkbox to include objects (resources) that are marked for deletion in the results of this operation.",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "value": false
+        },
+        {
+          "title": "Member Types",
+          "name": "member_types",
+          "type": "text",
+          "tooltip": "Specify comma-separated valid member types using which you want to filter the VMware NSX-T groups. ",
+          "description": "(Optional) Specify comma-separated valid member types using which you want to filter the VMware NSX-T groups.",
+          "required": false,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Page Size",
+          "name": "page_size",
+          "type": "integer",
+          "tooltip": "The maximum number of results, per page, that this operation should return.",
+          "description": "(Optional) The maximum number of results, per page, that this operation should return.",
+          "required": false,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Sort by Field",
+          "name": "sort_by",
+          "type": "text",
+          "tooltip": "The name of the field based on which you want to sort the result.",
+          "description": "(Optional) The name of the field based on which you want to sort the result.",
+          "required": false,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Sort Ascending",
+          "name": "sort_ascending",
+          "type": "checkbox",
+          "tooltip": "Select this checkbox to sort the results of this operation in ascending order based on the field you have specified in the Sort By Field parameter.",
+          "description": "Select this checkbox to sort the results of this operation in ascending order based on the field you have specified in the Sort By Field parameter.",
+          "required": false,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Cursor",
+          "name": "cursor",
+          "type": "text",
+          "tooltip": "The opaque cursor to be used for getting the next page of records.",
+          "description": "(Optional) The opaque cursor to be used for getting the next page of records.",
+          "required": false,
+          "editable": true,
+          "visible": true
+        }
+      ],
+      "enabled": true,
+      "output_schema": {
+        "sort_ascending": "",
+        "sort_by": "",
+        "result_count": "",
+        "results": [
+          {
+            "resource_type": "",
+            "description": "",
+            "id": "",
+            "display_name": "",
+            "path": "",
+            "parent_path": "",
+            "relative_path": "",
+            "expression": [
+              {
+                "resource_type": "",
+                "member_type": "",
+                "value": "",
+                "key": "",
+                "operator": "",
+                "_protection": ""
+              }
+            ],
+            "_create_user": "",
+            "_create_time": "",
+            "_last_modified_user": "",
+            "_last_modified_time": "",
+            "_system_owned": "",
+            "_protection": "",
+            "_revision": ""
+          }
+        ]
+      }
+    },
+    {
+      "operation": "get_group_details",
+      "title": "Get Group Details",
+      "category": "investigation",
+      "annotation": "get_group_details",
+      "description": "Retrieves details of a specific group for a specific domain from VMware NSX-T based on the domain ID and group ID you have specified.",
+      "parameters": [
+        {
+          "title": "Domain ID",
+          "name": "domain_id",
+          "type": "text",
+          "tooltip": "Specify the domain ID for which you want to retrieve the details of the specified group.",
+          "description": "Specify the domain ID for which you want to retrieve the details of the specified group.",
+          "required": true,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Group ID",
+          "name": "group_id",
+          "type": "text",
+          "tooltip": "Specify the ID of the group whose details you want to retrieve from VMware NSX-T.",
+          "description": "Specify the ID of the group whose details you want to retrieve from VMware NSX-T.",
+          "required": true,
+          "editable": true,
+          "visible": true
+        }
+      ],
+      "enabled": true,
+      "output_schema": {
+        "resource_type": "",
+        "description": "",
+        "id": "",
+        "display_name": "",
+        "path": "",
+        "parent_path": "",
+        "relative_path": "",
+        "expression": [
+          {
+            "resource_type": "",
+            "member_type": "",
+            "value": "",
+            "key": "",
+            "operator": "",
+            "_protection": ""
+          }
+        ],
+        "_create_user": "",
+        "_create_time": "",
+        "_last_modified_user": "",
+        "_last_modified_time": "",
+        "_system_owned": "",
+        "_protection": "",
+        "_revision": ""
+      }
+    },
+    {
+      "operation": "upsert_group",
+      "title": "Upsert Group",
+      "category": "miscellaneous",
+      "annotation": "upsert_group",
+      "description": "Creates or Updates the group for the specified domain in VMware NSX-T based on the domain ID, group ID, and other input parameters (fields) you have specified. If a group for the given group-id is not present, then the group object gets created, and if it is present then the group object gets updated, i.e. it will get completely replaced.",
+      "parameters": [
+        {
+          "title": "Domain ID",
+          "name": "domain_id",
+          "type": "text",
+          "tooltip": "Specify the domain ID for which you want to create or update the specified group.",
+          "description": "Specify the domain ID for which you want to create or update the specified group.",
+          "required": true,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Group ID",
+          "name": "group_id",
+          "type": "text",
+          "tooltip": "Specify the ID of the group that you want to create or update in the specified domain.",
+          "description": "Specify the ID of the group that you want to create or update in the specified domain.",
+          "required": true,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Display Name",
+          "name": "display_name",
+          "type": "text",
+          "tooltip": "The name or identifier of the group that will be used to display this group in logs or GUI.",
+          "description": "(Optional) The name or identifier of the group that will be used to display this group in logs or GUI.",
+          "required": false,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "text",
+          "tooltip": "The description of the group that you want to create or update for the specified domain.",
+          "description": "(Optional) The description of the group that you want to create or update for the specified domain.",
+          "required": false,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Group Type",
+          "name": "group_type",
+          "type": "text",
+          "tooltip": "Specify a CSV list of group types that you want to assign to the specified group. ",
+          "description": "(Optional) Specify a CSV list of group types that you want to assign to the specified group.",
+          "required": false,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "State",
+          "name": "state",
+          "type": "select",
+          "tooltip": "Select the realization state that you want to assign to the specified group.",
+          "description": "Select the realization state that you want to assign to the specified group. You can choose between IN PROGRESS, SUCCESS, OR FAILURE.",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "options": [
+            "IN_PROGRESS",
+            "SUCCESS",
+            "FAILURE"
+          ]
+        },
+        {
+          "title": "Expression",
+          "name": "expression",
+          "type": "json",
+          "tooltip": "Specify the array of conditional expressions for the specified group.",
+          "description": "(Optional) Specify the array of conditional expressions for the specified group.",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "value": [
+            {
+              "member_type": "VirtualMachine",
+              "value": "webvm",
+              "key": "Tag",
+              "operator": "EQUALS",
+              "resource_type": "Condition"
+            }
+          ]
+        },
+        {
+          "title": "Tags",
+          "name": "tags",
+          "type": "json",
+          "tooltip": "Specify the array of tags in the JSON format (key-value pairs) for the specified group. Note: You can specify a maximum of 30 items.",
+          "description": "(Optional) Specify the array of tags in the JSON format (key-value pairs) for the specified group. Note: You can specify a maximum of 30 items.",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "value": [
+            {
+              "value": "webvm",
+              "key": "Tag"
+            }
+          ]
+        },
+        {
+          "title": "Extended Expression",
+          "name": "extended_expression",
+          "type": "json",
+          "tooltip": "Specify the array of extended expressions for the specified group. Extended Expressions allow additional higher-level context to be specified for grouping criteria. For example, user AD group.",
+          "description": "(Optional) Specify the array of extended expressions for the specified group. Extended Expressions allow additional higher-level context to be specified for grouping criteria. For example, user AD group.",
+          "required": false,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Additional Fields",
+          "name": "additional_field",
+          "type": "json",
+          "tooltip": "Specify any additional fields in the JSON format for the specified group.",
+          "description": "(Optional) Specify any additional fields in the JSON format for the specified group.",
+          "required": false,
+          "editable": true,
+          "visible": true
+        }
+      ],
+      "enabled": true,
+      "output_schema": {
+        "resource_type": "",
+        "description": "",
+        "id": "",
+        "display_name": "",
+        "path": "",
+        "parent_path": "",
+        "relative_path": "",
+        "expression": [
+          {
+            "resource_type": "",
+            "member_type": "",
+            "value": "",
+            "key": "",
+            "operator": "",
+            "_protection": ""
+          }
+        ],
+        "_create_user": "",
+        "_create_time": "",
+        "_last_modified_user": "",
+        "_last_modified_time": "",
+        "_system_owned": "",
+        "_protection": "",
+        "_revision": ""
+      }
+    },
+    {
+      "operation": "delete_group",
+      "title": "Delete Group",
+      "category": "miscellaneous",
+      "annotation": "delete_group",
+      "description": "Deletes a specific group from the specified domain in VMware NSX-T based on the domain ID and group ID you have specified.",
+      "parameters": [
+        {
+          "title": "Domain ID",
+          "name": "domain_id",
+          "type": "text",
+          "tooltip": "Specify the domain ID from which you want to delete the specified group.",
+          "description": "Specify the domain ID from which you want to delete the specified group.",
+          "required": true,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Group ID",
+          "name": "group_id",
+          "type": "text",
+          "tooltip": "Specify the ID of the group that you want to delete from the specified domain.",
+          "description": "Specify the ID of the group that you want to delete from the specified domain.",
+          "required": true,
+          "editable": true,
+          "visible": true
+        }
+      ],
+      "enabled": true,
+      "output_schema": {
+        "status": "",
+        "result": ""
+      }
+    },
+    {
+      "operation": "add_remove_ip_addresses",
+      "title": "Add/Remove IP Addresses",
+      "category": "investigation",
+      "annotation": "add_remove_ip_addresses",
+      "description": "Adds or removes the specified IP addresses from the specified expression of a group in VMware NSX-T based on the domain ID, group ID, expression ID, and other input parameters you have specified.",
+      "parameters": [
+        {
+          "title": "Domain ID",
+          "name": "domain_id",
+          "type": "text",
+          "tooltip": "Specify the domain ID in which you want to add or remove the specified IP addresses.",
+          "description": "Specify the domain ID in which you want to add or remove the specified IP addresses.",
+          "required": true,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Group ID",
+          "name": "group_id",
+          "type": "text",
+          "tooltip": "Specify the group ID in which you want to add or remove the specified IP addresses.",
+          "description": "Specify the group ID in which you want to add or remove the specified IP addresses.",
+          "required": true,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Expression ID",
+          "name": "expression_id",
+          "type": "text",
+          "tooltip": "Specify the ID of the Expression in which you want to add or remove the specified IP addresses.",
+          "description": "Specify the ID of the Expression in which you want to add or remove the specified IP addresses.",
+          "required": true,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Action",
+          "name": "action",
+          "type": "select",
+          "tooltip": "Action parameter determines whether to add or remove the group members.",
+          "description": "Select the action that you want to perform, i.e.,Add or Remove. The Action parameter determines whether to add or remove the IP addresses.",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "options": [
+            "Add",
+            "Remove"
+          ],
+          "value": "Add"
+        },
+        {
+          "title": "IP Addresses",
+          "name": "ip_addresses",
+          "type": "text",
+          "tooltip": "Specify a CSV list of IP addresses that you want to add or remove from the specified expression of a group in VMware NSX-T.",
+          "description": "Specify a CSV list of IP addresses that you want to add or remove from the specified expression of a group in VMware NSX-T.",
+          "required": true,
+          "editable": true,
+          "visible": true
+        }
+      ],
+      "enabled": true,
+      "output_schema": {
+        "status": "",
+        "result": ""
+      }
+    },
+    {
+      "operation": "add_remove_mac_addresses",
+      "title": "Add/Remove MAC Addresses",
+      "category": "investigation",
+      "annotation": "add_remove_mac_addresses",
+      "description": "Adds or removes the specified MAC addresses from the specified expression of a group in VMware NSX-T based on the domain ID, group ID, expression ID, and other input parameters you have specified.",
+      "parameters": [
+        {
+          "title": "Domain ID",
+          "name": "domain_id",
+          "type": "text",
+          "tooltip": "Specify the domain ID in which you want to add or remove the specified MAC addresses.",
+          "description": "Specify the domain ID in which you want to add or remove the specified MAC addresses.",
+          "required": true,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Group ID",
+          "name": "group_id",
+          "type": "text",
+          "tooltip": "Specify the group ID in which you want to add or remove the specified MAC addresses.",
+          "description": "Specify the group ID in which you want to add or remove the specified MAC addresses.",
+          "required": true,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Expression ID",
+          "name": "expression_id",
+          "type": "text",
+          "tooltip": "Specify the ID of the Expression in which you want to add or remove the specified MAC addresses.",
+          "description": "Specify the ID of the Expression in which you want to add or remove the specified MAC addresses.",
+          "required": true,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Action",
+          "name": "action",
+          "type": "select",
+          "tooltip": "Action parameter determines whether to add or remove the group members.",
+          "description": "Select the action that you want to perform, i.e., Add or Remove. The Action parameter determines whether to add or remove the MAC addresses.",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "options": [
+            "Add",
+            "Remove"
+          ]
+        },
+        {
+          "title": "MAC Addresses",
+          "name": "mac_addresses",
+          "type": "text",
+          "tooltip": "Specify a CSV list of MAC addresses that you want to add or remove from the specified expression of a group in VMware NSX-T.",
+          "description": "Specify a CSV list of MAC addresses that you want to add or remove from the specified expression of a group in VMware NSX-T.",
+          "required": false,
+          "editable": true,
+          "visible": true
+        }
+      ],
+      "enabled": true,
+      "output_schema": {
+        "status": "",
+        "result": ""
+      }
+    },
+    {
+      "operation": "get_rules_list",
+      "title": "Get Rules List",
+      "category": "investigation",
+      "annotation": "get_rules_list",
+      "description": "Retrieves a list of all the firewall rules for a specific domain from VMware NSX-T based on the domain ID, policy ID, and rule ID you have specified.",
+      "parameters": [
+        {
+          "title": "Domain ID",
+          "name": "domain_id",
+          "type": "text",
+          "tooltip": "Specify the domain ID for which you want to retrieve the list of firewall rules.",
+          "description": "Specify the domain ID for which you want to retrieve the list of firewall rules.",
+          "required": true,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Policy ID",
+          "name": "policy_id",
+          "type": "text",
+          "tooltip": "Specify the policy ID whose rules you want to retrieve from VMware NSX-T.",
+          "description": "Specify the policy ID whose rules you want to retrieve from VMware NSX-T.",
+          "required": true,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Include Delete Objects",
+          "name": "include_mark_for_delete_objects",
+          "type": "checkbox",
+          "tooltip": "Select this checkbox to include objects (resources) that are marked for deletion in the results of this operation.",
+          "description": "Select this checkbox to include objects (resources) that are marked for deletion in the results of this operation.",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "value": false
+        },
+        {
+          "title": "Page Size",
+          "name": "page_size",
+          "type": "integer",
+          "tooltip": "The maximum number of results, per page, that this operation should return.",
+          "description": "(Optional) The maximum number of results, per page, that this operation should return.",
+          "required": false,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Sort by Field",
+          "name": "sort_by",
+          "type": "text",
+          "tooltip": "The name of the field based on which you want to sort the result.",
+          "description": "(Optional) The name of the field based on which you want to sort the result.",
+          "required": false,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Sort Ascending",
+          "name": "sort_ascending",
+          "type": "checkbox",
+          "tooltip": "Select this checkbox to sort the results of this operation in ascending order based on the field you have specified in the Sort by Field parameter.",
+          "description": "Select this checkbox to sort the results of this operation in ascending order based on the field you have specified in the Sort by Field parameter.",
+          "required": false,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Cursor",
+          "name": "cursor",
+          "type": "text",
+          "tooltip": "The opaque cursor to be used for getting the next page of records.",
+          "description": "(Optional) The opaque cursor to be used for getting the next page of records. ",
+          "required": false,
+          "editable": true,
+          "visible": true
+        }
+      ],
+      "enabled": true,
+      "output_schema": {
+        "sort_ascending": "",
+        "sort_by": "",
+        "result_count": "",
+        "results": [
+          {
+            "resource_type": "",
+            "description": "",
+            "id": "",
+            "display_name": "",
+            "path": "",
+            "parent_path": "",
+            "relative_path": "",
+            "sequence_number": "",
+            "source_groups": [],
+            "logged": "",
+            "destination_groups": [],
+            "scope": [],
+            "action": "",
+            "services": [],
+            "_create_user": "",
+            "_create_time": "",
+            "_last_modified_user": "",
+            "_last_modified_time": "",
+            "_system_owned": "",
+            "_protection": "",
+            "_revision": ""
+          }
+        ]
+      }
+    },
+    {
+      "operation": "get_rule_details",
+      "title": "Get Rule Details",
+      "category": "investigation",
+      "annotation": "get_rule_details",
+      "description": "Retrieves details of a specific firewall for a specific domain from VMware NSX-T based on the domain ID and group ID you have specified.",
+      "parameters": [
+        {
+          "title": "Domain ID",
+          "name": "domain_id",
+          "type": "text",
+          "tooltip": "Specify the domain ID for which you want to retrieve the details of the specified firewall rules.",
+          "description": "Specify the domain ID for which you want to retrieve the details of the specified firewall rules.",
+          "required": true,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Policy ID",
+          "name": "policy_id",
+          "type": "text",
+          "tooltip": "Specify the policy ID for which you want to retrieve the details of the specified firewall rules.",
+          "description": "Specify the policy ID for which you want to retrieve the details of the specified firewall rules.",
+          "required": true,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Rule ID",
+          "name": "rule_id",
+          "type": "text",
+          "tooltip": "Specify the ID of the rule whose details you want to retrieve from VMware NSX-T.",
+          "description": "Specify the ID of the rule whose details you want to retrieve from VMware NSX-T.",
+          "required": true,
+          "editable": true,
+          "visible": true
+        }
+      ],
+      "enabled": true,
+      "output_schema": {
+        "resource_type": "",
+        "description": "",
+        "id": "",
+        "display_name": "",
+        "path": "",
+        "parent_path": "",
+        "relative_path": "",
+        "sequence_number": "",
+        "source_groups": [],
+        "logged": "",
+        "destination_groups": [],
+        "scope": [],
+        "action": "",
+        "services": [],
+        "_create_user": "",
+        "_create_time": "",
+        "_last_modified_user": "",
+        "_last_modified_time": "",
+        "_system_owned": "",
+        "_protection": "",
+        "_revision": ""
+      }
+    },
+    {
+      "operation": "upsert_rule",
+      "title": "Upsert Rule",
+      "category": "miscellaneous",
+      "annotation": "upsert_rule",
+      "description": "Creates or Updates the firewall rule for the specified domain and policy in VMware NSX-T based on the domain ID, policy ID, rule ID, and other input parameters you have specified. If a group for the given rule-id is not present, then the rule object gets created, and if it is present then the rule object gets updated, i.e. it will get completely replaced.",
+      "parameters": [
+        {
+          "title": "Domain ID",
+          "name": "domain_id",
+          "type": "text",
+          "tooltip": "Specify the domain ID for which you want to create or update the specified rule.",
+          "description": "Specify the domain ID for which you want to create or update the specified rule.",
+          "required": true,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Policy ID",
+          "name": "policy_id",
+          "type": "text",
+          "tooltip": "Specify the policy ID for which you want to create or update the specified rule.",
+          "description": "Specify the policy ID for which you want to create or update the specified rule.",
+          "required": true,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Rule ID",
+          "name": "rule_id",
+          "type": "text",
+          "tooltip": "Specify the ID of the rule that you want to create or update in the specified domain and policy.",
+          "description": "Specify the ID of the rule that you want to create or update in the specified domain and policy.",
+          "required": true,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Display Name",
+          "name": "display_name",
+          "type": "text",
+          "tooltip": "The name or identifier of the rule that will be used to display this rule in logs or GUI.",
+          "description": "(Optional) The name or identifier of the rule that will be used to display this rule in logs or GUI.",
+          "required": false,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "text",
+          "tooltip": "The description of the rule that you want to create or update in the specified domain and policy.",
+          "description": "The description of the rule that you want to create or update in the specified domain and policy.",
+          "required": false,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Source Group Paths",
+          "name": "source_groups",
+          "type": "text",
+          "tooltip": "Provide CSV list of source group paths, We need paths as duplicate names may exist for groups under different domains.",
+          "description": "(Optional) Specify a CSV list of source group paths for the specified rule. Paths are required since duplicate names might exist for groups in different domains. Along with paths, IP addresses of types IPv4 and IPv6 are also supported. IP addresses can be in one of the following formats: CIDR, IP Address, or Range of IP addresses. Note: To specify all groups, use the constant \"ANY\" (case insensitive). If \"ANY\" is used, it should be the ONLY element in the group array.",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "placeholder": [
+            "/infra/domains/vmc_domain/groups/webgroup"
+          ]
+        },
+        {
+          "title": "Destination Groups Paths",
+          "name": "destination_groups",
+          "type": "text",
+          "tooltip": "Provide CSV list of destination group paths, Destination group paths We need paths as duplicate names may exist for groups under different domains",
+          "description": "(Optional) Specify a CSV list of destination group paths for the specified rule. Paths are required since duplicate names might exist for groups in different domains. Along with paths, IP addresses of types IPv4 and IPv6 are also supported. IP addresses can be in one of the following formats: CIDR, IP Address, or Range of IP addresses. Note: To specify all groups, use the constant \"ANY\" (case insensitive). If \"ANY\" is used, it should be the ONLY element in the group array.",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "placeholder": [
+            "/infra/domains/vmc_domain/groups/dbgroup"
+          ]
+        },
+        {
+          "title": "Logged",
+          "name": "logged",
+          "type": "checkbox",
+          "tooltip": "Select this checkbox to enable packet logging for the specified rule.",
+          "description": "Select this checkbox to enable packet logging for the specified rule.",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "value": false
+        },
+        {
+          "title": "Disabled",
+          "name": "disabled",
+          "type": "checkbox",
+          "tooltip": "Select this checkbox to disable the rule. By default, this checkbox is unchecked, i.e., the rule is enabled.",
+          "description": "Select this checkbox to disable the rule. By default, this checkbox is unchecked, i.e., the rule is enabled.",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "value": false
+        },
+        {
+          "title": "Scope",
+          "name": "scope",
+          "type": "text",
+          "tooltip": "Specify a CSV list of policy paths where the specified rule is to be applied. Note: A given rule can be applied on multiple LRs/LRPs.",
+          "description": "(Optional) Specify a CSV list of policy paths where the specified rule is to be applied. Note: A given rule can be applied on multiple LRs/LRPs.",
+          "required": false,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Action",
+          "name": "action",
+          "type": "select",
+          "tooltip": "The action to be applied to all the services The JUMP_TO_APPLICATION action is only supported for rules created in the Environment category. Once a match is hit then the rule processing nwill jump to the rules present in the Application category, skipping all further rules in the Environment category. If no rules match in the Application category then the default application rule will be hit. This is applicable only for DFW.",
+          "description": "Select the action to be applied to all the services of the rule that you want to create or update. You can choose between ALLOW, DROP, REJECT, or JUMP_TO_APPLICATION. The JUMP_TO_APPLICATION action is supported only for rules created in the \"Environment\" category. Once a match is hit then the rule processing jumps to the rules present in the \"Application\" category, skipping all further rules in the \"Environment\" category. If the rules do not match in the \"Application\" category, then the default application rule will be hit. This is applicable only for DFW.",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "options": [
+            "ALLOW",
+            "DROP",
+            "REJECT",
+            "JUMP_TO_APPLICATION"
+          ]
+        },
+        {
+          "title": "Notes",
+          "name": "notes",
+          "type": "text",
+          "tooltip": "Specify additional notes for changes made for the specified rule.",
+          "description": "(Optional) Specify additional notes for changes made for the specified rule.",
+          "required": false,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Tags",
+          "name": "tags",
+          "type": "json",
+          "tooltip": "Specify the array of tags in the JSON format (key-value pairs) for the specified rule. Note: You can specify a maximum of 30 items.",
+          "description": "(Optional) Specify the array of tags in the JSON format (key-value pairs) for the specified rule. Note: You can specify a maximum of 30 items.",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "value": [
+            {
+              "value": "webvm",
+              "key": "Tag"
+            }
+          ]
+        },
+        {
+          "title": "Additional Fields",
+          "name": "additional_field",
+          "type": "json",
+          "tooltip": "(Optional) Specify any additional fields in the JSON format for the specified rule.",
+          "description": "(Optional) Specify any additional fields in the JSON format for the specified rule.",
+          "required": false,
+          "editable": true,
+          "visible": true
+        }
+      ],
+      "enabled": true,
+      "output_schema": {
+        "status": "",
+        "result": ""
+      }
+    },
+    {
+      "operation": "delete_rule",
+      "title": "Delete Rule",
+      "category": "miscellaneous",
+      "annotation": "delete_rule",
+      "description": "Deletes a specific rule from the specified domain and policy in VMware NSX-T based on the domain ID, policy ID, and rule ID you have specified.",
+      "parameters": [
+        {
+          "title": "Domain ID",
+          "name": "domain_id",
+          "type": "text",
+          "tooltip": "Specify the domain ID from which you want to delete the specified rule.",
+          "description": "Specify the domain ID from which you want to delete the specified rule.",
+          "required": true,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Policy ID",
+          "name": "policy_id",
+          "type": "text",
+          "tooltip": "Specify the policy ID from which you want to delete the specified group.",
+          "description": "Specify the policy ID from which you want to delete the specified group.",
+          "required": true,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Rule ID",
+          "name": "rule_id",
+          "type": "text",
+          "tooltip": "Specify the ID of the rule that you want to delete from the specified domain and policy.",
+          "description": "Specify the ID of the rule that you want to delete from the specified domain and policy.",
+          "required": true,
+          "editable": true,
+          "visible": true
+        }
+      ],
+      "enabled": true,
+      "output_schema": {
+        "status": "",
+        "result": ""
+      }
+    }
+  ]
+}
+
+
