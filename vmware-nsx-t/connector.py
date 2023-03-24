@@ -1,5 +1,5 @@
 """ Copyright start
-  Copyright (C) 2008 - 2022 Fortinet Inc.
+  Copyright (C) 2008 - 2023 Fortinet Inc.
   All rights reserved.
   FORTINET CONFIDENTIAL & FORTINET PROPRIETARY SOURCE CODE
   Copyright end """
@@ -15,7 +15,7 @@ class VMwareNSXTConnector(Connector):
         try:
             operation = operations.get(operation)
             if not operation:
-                logger.error('Unsupported operation: {}'.format(operation))
+                logger.error('Unsupported operation: {0}'.format(operation))
                 raise ConnectorError('Unsupported operation')
             return operation(config, params)
         except Exception as err:
