@@ -269,7 +269,28 @@ def delete_rule(config, params):
     except Exception as Err:
         logger.error(Err)
         raise ConnectorError(Err)
-
+        
+def manage_vm_tag(config, params):
+    try:
+        nsx = VMwareNSXT(config)
+        external_id = params.get('external_id')
+        vm_tag_update_action = params.get('vm_tag_update_action')
+        vm_scope = params.get('vm_scope')
+        vm_tag = params.get('vm_tag')
+        action_dict = { "ADD": "add_tags", "REMOVE": "remove_tags", "UPDATE": "update_tags" }
+        if vm_tag_update_action == 'ADD':
+            endpoint = f"/api/v1/fabric/virtual-machines?action={action_dict['ADD']}"
+        elif vm_tag_update_action == 'REMOVE':
+            endpoint = f"/api/v1/fabric/virtual-machines?action={action_dict['REMOVE']}"
+        elif vm_tag_update_action == 'UPDATE':
+            endpoint = f"/api/v1/fabric/virtual-machines?action={action_dict['UPDATE']}"
+			
+        params_dict = { "external_id": external_id, "tags": [ {"scope": vm_scope, "tag": vm_tag } ] }
+			
+        resp = nsx.make_rest_call(endpoint, payload=params_dict, method='POST')
+    except Exception as Err:
+        logger.error(Err)
+        raise ConnectorError(Err)
 
 def _check_health(config):
     try:
@@ -294,7 +315,8 @@ operations = {
     'get_rules_list': get_rules_list,
     'get_rule_details': get_rule_details,
     'upsert_rule': upsert_rule,
-    'delete_rule': delete_rule
+    'delete_rule': delete_rule,
+    'manage_vm_tag':manage_vm_tag
 
 }
 

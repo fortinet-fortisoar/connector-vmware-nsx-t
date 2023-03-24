@@ -5,7 +5,7 @@
   "publisher": "Community",
   "cs_approved": false,
   "cs_compatible": true,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "category": "Firewall",
   "help_online": "https://docs.fortinet.com/document/fortisoar/1.0.0/vmware-nsx-t/226/vmware-nsx-t-v1-0-0",
   "icon_small_name": "small.png",
@@ -1280,7 +1280,66 @@
         "status": "",
         "result": ""
       }
-    }
+    },
+        {
+            "operation": "manage_vm_tag",
+            "title": "Manage VM TAG",
+            "category": "miscellaneous",
+            "annotation": "manage_vm_tag",
+            "description": "Add, update , delete tags for a Virtual Machine",
+            "parameters": [
+                {
+                    "title": "External ID of VM",
+                    "name": "external_id",
+                    "type": "text",
+                    "tooltip": "Specify the External ID of VM.",
+                    "description": "Specify the External ID of VM for which you want add, remove or update tags.",
+                    "required": true,
+                    "editable": true,
+                    "visible": true
+                },
+                {
+                    "title": "Action",
+                    "name": "vm_tag_update_action",
+                    "type": "select",
+                    "tooltip": "Specify the Action type.",
+                    "description": "Specify the Action type, to ADD, REMOVE, UPDATE tags for a VM.",
+                    "required": true,
+                    "editable": true,
+                    "visible": true,
+                    "options": [
+                        "ADD",
+                        "REMOVE",
+                        "UPDATE"
+                    ]
+                },
+                {
+                    "title": "Scope",
+                    "name": "vm_scope",
+                    "type": "text",
+                    "tooltip": "Specify a single string of scope, where the specified rule is to be applied - example scope - os, security",
+                    "description": "Specify a single string of scope, where the specified rule is to be applied - example scope - os, security",
+                    "required": true,
+                    "editable": true,
+                    "visible": true
+                },
+                {
+                    "title": "VM Tag",
+                    "name": "vm_tag",
+                    "type": "text",
+                    "tooltip": "Specify single string of tag - example tags - linux - here tag will be added to scope",
+                    "description": "Specify single string of tag - example tags - linux - here tag will be added to scope",
+                    "required": true,
+                    "editable": true,
+                    "visible": true
+                }
+            ],
+            "enabled": true,
+            "output_schema": {
+                "status": "",
+                "result": ""
+            }
+        }
   ]
 }
 
