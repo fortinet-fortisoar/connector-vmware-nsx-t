@@ -3,7 +3,7 @@
   "data": [
     {
       "@type": "WorkflowCollection",
-      "name": "Sample - VMware NSX T - 1.0.0",
+      "name": "Sample - VMware NSX T - 1.1.0",
       "description": "Sample playbooks for \"VMware NSX T\" connector. If you are planning to use any of the sample playbooks in your environment, ensure that you clone those playbooks and move them to a different collection, since the sample playbook collection gets deleted during connector upgrade and delete.",
       "visible": true,
       "image": "/api/3/images/4dcbd12c-8bdf-4c5b-8f88-7bc3f4f0f1c5",
@@ -96,7 +96,7 @@
                   "additional_field": "",
                   "extended_expression": ""
                 },
-                "version": "1.0.0",
+                "version": "1.1.0",
                 "connector": "vmware-nsx-t",
                 "operation": "upsert_group",
                 "operationTitle": "Upsert Group",
@@ -166,7 +166,7 @@
                   "domain_id": "vmc",
                   "policy_id": "application-section-1"
                 },
-                "version": "1.0.0",
+                "version": "1.1.0",
                 "connector": "vmware-nsx-t",
                 "operation": "delete_rule",
                 "operationTitle": "Delete Rule",
@@ -292,7 +292,7 @@
                   "domain_id": "vmc",
                   "policy_id": "application-section-1"
                 },
-                "version": "1.0.0",
+                "version": "1.1.0",
                 "connector": "vmware-nsx-t",
                 "operation": "get_rule_details",
                 "operationTitle": "Get Rule Details",
@@ -373,7 +373,7 @@
                   "additional_field": "",
                   "destination_groups": ""
                 },
-                "version": "1.0.0",
+                "version": "1.1.0",
                 "connector": "vmware-nsx-t",
                 "operation": "upsert_rule",
                 "operationTitle": "Update Rule",
@@ -481,7 +481,7 @@
                   "expression_id": "macaddressexp",
                   "mac_addresses": "[   \"00:0a:95:9d:68:16\",   \"00:0a:95:9d:68:17\" ]"
                 },
-                "version": "1.0.0",
+                "version": "1.1.0",
                 "connector": "vmware-nsx-t",
                 "operation": "add_remove_mac_addresses",
                 "operationTitle": "Add/Remove MAC Addresses",
@@ -583,7 +583,7 @@
                   "sort_ascending": false,
                   "include_mark_for_delete_objects": false
                 },
-                "version": "1.0.0",
+                "version": "1.1.0",
                 "connector": "vmware-nsx-t",
                 "operation": "get_rules_list",
                 "operationTitle": "Get Rules List",
@@ -736,7 +736,7 @@
                   "display_name": "TEST Block IP Policy",
                   "additional_field": ""
                 },
-                "version": "1.0.0",
+                "version": "1.1.0",
                 "connector": "vmware-nsx-t",
                 "operation": "upsert_security_policy",
                 "operationTitle": "Upsert Security Policy",
@@ -833,7 +833,7 @@
                   "group_id": "webgroup",
                   "domain_id": "vmc"
                 },
-                "version": "1.0.0",
+                "version": "1.1.0",
                 "connector": "vmware-nsx-t",
                 "operation": "get_group_details",
                 "operationTitle": "Get Group Details",
@@ -902,7 +902,7 @@
                   "domain_id": "vmc",
                   "policy_id": "application-section-1"
                 },
-                "version": "1.0.0",
+                "version": "1.1.0",
                 "connector": "vmware-nsx-t",
                 "operation": "delete_security_policy",
                 "operationTitle": "Deletes Security Policy",
@@ -999,7 +999,7 @@
                   "domain_id": "vmc",
                   "policy_id": "application-section-1"
                 },
-                "version": "1.0.0",
+                "version": "1.1.0",
                 "connector": "vmware-nsx-t",
                 "operation": "get_security_policy_details",
                 "operationTitle": "Get Security Policy Details",
@@ -1101,7 +1101,7 @@
                   "include_rule_count": false,
                   "include_mark_for_delete_objects": false
                 },
-                "version": "1.0.0",
+                "version": "1.1.0",
                 "connector": "vmware-nsx-t",
                 "operation": "get_security_policies_list",
                 "operationTitle": "Get Security Policies List",
@@ -1239,7 +1239,7 @@
                   "sort_ascending": false,
                   "include_mark_for_delete_objects": false
                 },
-                "version": "1.0.0",
+                "version": "1.1.0",
                 "connector": "vmware-nsx-t",
                 "operation": "get_groups_list",
                 "operationTitle": "Get Groups List",
@@ -1336,7 +1336,7 @@
                   "group_id": "webgroup",
                   "domain_id": "vmc"
                 },
-                "version": "1.0.0",
+                "version": "1.1.0",
                 "connector": "vmware-nsx-t",
                 "operation": "delete_group",
                 "operationTitle": "Delete Group",
@@ -1408,7 +1408,7 @@
                   "ip_addresses": "[\"10.110.9.4-10.110.9.10\", \"10.110.9.3/24\" ]",
                   "expression_id": "ipaddressexp"
                 },
-                "version": "1.0.0",
+                "version": "1.1.0",
                 "connector": "vmware-nsx-t",
                 "operation": "add_remove_ip_addresses",
                 "operationTitle": "Add/Remove IP Addresses",
