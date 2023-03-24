@@ -5,7 +5,7 @@
   "publisher": "Community",
   "cs_approved": false,
   "cs_compatible": true,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "category": "Firewall",
   "help_online": "https://docs.fortinet.com/document/fortisoar/1.0.0/vmware-nsx-t/226/vmware-nsx-t-v1-0-0",
   "icon_small_name": "small.png",
