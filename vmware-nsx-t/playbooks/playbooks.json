@@ -2,7 +2,7 @@
   "type": "workflow_collections",
   "data": [
     {
-      "uuid": "ccd5c98d-34fd-4f3b-bae5-fecbf01285af",
+      "uuid": "32d3eef5-7a07-48d7-9425-faa3b330af4f",
       "@type": "WorkflowCollection",
       "name": "Sample - VMware NSX-T - 1.1.0",
       "description": "VMware NSX-T Data Center focuses on providing networking, security, automation, and operational simplicity for emerging application frameworks and architectures that have heterogeneous endpoint environments and technology stacks. This Connector automated operations such as create, update and delete operation related to policy, rule, group etc.",
@@ -15,8 +15,8 @@
       "workflows": [
         {
           "@type": "Workflow",
-          "uuid": "d9cd86e0-f00a-455c-851a-e13ff6f1de7f",
-          "collection": "/api/3/workflow_collections/ccd5c98d-34fd-4f3b-bae5-fecbf01285af",
+          "uuid": "9351ad6b-829b-46e0-9c4e-77f2b72be0fa",
+          "collection": "/api/3/workflow_collections/32d3eef5-7a07-48d7-9425-faa3b330af4f",
           "triggerLimit": null,
           "description": "Retrieves a list of all the security policies for a specific domain from VMware NSX-T based on the domain ID and other input parameters you have specified.",
           "name": "Get Security Policies List",
@@ -30,16 +30,16 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/a0ea78f8-1be6-4c91-8142-752dbc44cf6d",
+          "triggerStep": "/api/3/workflow_steps/bab49214-053c-49b9-af87-7d37ff57acc9",
           "steps": [
             {
-              "uuid": "a0ea78f8-1be6-4c91-8142-752dbc44cf6d",
+              "uuid": "bab49214-053c-49b9-af87-7d37ff57acc9",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "0174f5d6-6653-45d8-a747-04b380e87d3d",
+                "route": "67bd3f0e-0a86-4258-a0e1-7ae65630e2d3",
                 "title": "VMware NSX-T: Get Security Policies List",
                 "resources": [
                   "alerts"
@@ -59,7 +59,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "f986321d-daad-4052-bff4-c3eb3b34cf81",
+              "uuid": "2795bb04-517a-40e9-974d-7e49dacd52d8",
               "@type": "WorkflowStep",
               "name": "Get Security Policies List",
               "description": null,
@@ -84,19 +84,19 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "d5fb54ff-4c5b-4e2a-b405-fd7d3ce11d60",
+              "uuid": "53c2eef6-0179-47ba-abe9-c3b16465729e",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Security Policies List",
-              "sourceStep": "/api/3/workflow_steps/a0ea78f8-1be6-4c91-8142-752dbc44cf6d",
-              "targetStep": "/api/3/workflow_steps/f986321d-daad-4052-bff4-c3eb3b34cf81"
+              "sourceStep": "/api/3/workflow_steps/bab49214-053c-49b9-af87-7d37ff57acc9",
+              "targetStep": "/api/3/workflow_steps/2795bb04-517a-40e9-974d-7e49dacd52d8"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "8b3be66c-da6f-4e14-9ef6-00199a74c1ef",
-          "collection": "/api/3/workflow_collections/ccd5c98d-34fd-4f3b-bae5-fecbf01285af",
+          "uuid": "d721c639-b4eb-4257-b44f-b33b39cfdafc",
+          "collection": "/api/3/workflow_collections/32d3eef5-7a07-48d7-9425-faa3b330af4f",
           "triggerLimit": null,
           "description": "Retrieves details of a specific security policy for a specific domain from VMware NSX-T based on the domain ID and policy ID you have specified.",
           "name": "Get Security Policy Details",
@@ -110,16 +110,16 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/643e3a25-742b-4b54-b5be-9be7f0bdeec3",
+          "triggerStep": "/api/3/workflow_steps/633c92fc-d896-444b-b6fb-c69e3d3e7947",
           "steps": [
             {
-              "uuid": "643e3a25-742b-4b54-b5be-9be7f0bdeec3",
+              "uuid": "633c92fc-d896-444b-b6fb-c69e3d3e7947",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "a53cbfa4-aabc-454a-bd1d-6c4d24639916",
+                "route": "25383ecc-fe4c-4555-8bce-0199fafd3fae",
                 "title": "VMware NSX-T: Get Security Policy Details",
                 "resources": [
                   "alerts"
@@ -139,7 +139,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "d70ddd95-6b6e-4140-90e5-376c8ec54669",
+              "uuid": "7e843403-12c1-4526-8ef7-9e83929bd719",
               "@type": "WorkflowStep",
               "name": "Get Security Policy Details",
               "description": null,
@@ -161,19 +161,19 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "cfb05bfc-7345-4fe0-8391-934479323850",
+              "uuid": "7d8d16bb-4df8-4525-bd7e-ec064ae203af",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Security Policy Details",
-              "sourceStep": "/api/3/workflow_steps/643e3a25-742b-4b54-b5be-9be7f0bdeec3",
-              "targetStep": "/api/3/workflow_steps/d70ddd95-6b6e-4140-90e5-376c8ec54669"
+              "sourceStep": "/api/3/workflow_steps/633c92fc-d896-444b-b6fb-c69e3d3e7947",
+              "targetStep": "/api/3/workflow_steps/7e843403-12c1-4526-8ef7-9e83929bd719"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "b166ca77-4a03-48b4-9168-92cdde81e3d3",
-          "collection": "/api/3/workflow_collections/ccd5c98d-34fd-4f3b-bae5-fecbf01285af",
+          "uuid": "ea7e9a87-e856-468c-91c5-9a7f548bdf74",
+          "collection": "/api/3/workflow_collections/32d3eef5-7a07-48d7-9425-faa3b330af4f",
           "triggerLimit": null,
           "description": "Creates or Updates the security policy for the specified domain in VMware NSX-T based on the domain ID, policy ID, and other input parameters you have specified. If a security policy for the given security-policy-id is not present, then the security policy object gets created, and if it is present then the security policy object gets updated, i.e. it will get completely replaced.",
           "name": "Upsert Security Policy",
@@ -187,16 +187,16 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/e6db9618-41ab-4364-9b0f-acd2e134fd29",
+          "triggerStep": "/api/3/workflow_steps/7ddbe644-386c-483a-a7eb-878f48e6b53f",
           "steps": [
             {
-              "uuid": "e6db9618-41ab-4364-9b0f-acd2e134fd29",
+              "uuid": "7ddbe644-386c-483a-a7eb-878f48e6b53f",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "c6a368f7-169e-4474-b1b6-e0458c689138",
+                "route": "da8a5787-18aa-4524-a51a-84e764f4c22b",
                 "title": "VMware NSX-T: Upsert Security Policy",
                 "resources": [
                   "alerts"
@@ -216,7 +216,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "80abba4c-fc72-42d0-8e45-8f4efcc4a72a",
+              "uuid": "05776884-993d-4702-8f6e-bfe0c1b67a82",
               "@type": "WorkflowStep",
               "name": "Upsert Security Policy",
               "description": null,
@@ -262,19 +262,19 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "06078567-0c05-4430-8ce5-25f1f74e2b13",
+              "uuid": "1f034835-66de-491d-b8d2-bae59cb4bc13",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Upsert Security Policy",
-              "sourceStep": "/api/3/workflow_steps/e6db9618-41ab-4364-9b0f-acd2e134fd29",
-              "targetStep": "/api/3/workflow_steps/80abba4c-fc72-42d0-8e45-8f4efcc4a72a"
+              "sourceStep": "/api/3/workflow_steps/7ddbe644-386c-483a-a7eb-878f48e6b53f",
+              "targetStep": "/api/3/workflow_steps/05776884-993d-4702-8f6e-bfe0c1b67a82"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "90de2bf7-e9e1-4068-b51c-93d251293165",
-          "collection": "/api/3/workflow_collections/ccd5c98d-34fd-4f3b-bae5-fecbf01285af",
+          "uuid": "18ecfdb8-c208-4545-b668-f4849f487fdc",
+          "collection": "/api/3/workflow_collections/32d3eef5-7a07-48d7-9425-faa3b330af4f",
           "triggerLimit": null,
           "description": "Deletes a specific security policy, along with all the rules, from the specified domain in VMware NSX-T based on the domain ID and policy ID you have specified.",
           "name": "Delete Security Policy",
@@ -288,16 +288,16 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/18c56a95-eb98-4157-adaf-2a175b9fa8d5",
+          "triggerStep": "/api/3/workflow_steps/33b0f24c-f088-466c-9eac-cd8f7654d731",
           "steps": [
             {
-              "uuid": "18c56a95-eb98-4157-adaf-2a175b9fa8d5",
+              "uuid": "33b0f24c-f088-466c-9eac-cd8f7654d731",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "b3946ce7-d5be-47db-8c8d-07ad147c44e8",
+                "route": "96c76c5d-cd14-41f0-a26f-5a7edb63abf9",
                 "title": "VMware NSX-T: Delete Security Policy",
                 "resources": [
                   "alerts"
@@ -317,7 +317,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "14166b94-e9f8-4952-a35f-b8957cfe5039",
+              "uuid": "a3b60da9-b5d5-4d77-a7f6-0e0dfbd00d56",
               "@type": "WorkflowStep",
               "name": "Delete Security Policy",
               "description": null,
@@ -339,19 +339,19 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "2b3494e6-64a4-4a0f-b44f-9b6def4b6139",
+              "uuid": "d587c85e-cada-4194-beba-a6b06d496544",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Delete Security Policy",
-              "sourceStep": "/api/3/workflow_steps/18c56a95-eb98-4157-adaf-2a175b9fa8d5",
-              "targetStep": "/api/3/workflow_steps/14166b94-e9f8-4952-a35f-b8957cfe5039"
+              "sourceStep": "/api/3/workflow_steps/33b0f24c-f088-466c-9eac-cd8f7654d731",
+              "targetStep": "/api/3/workflow_steps/a3b60da9-b5d5-4d77-a7f6-0e0dfbd00d56"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "5b42a11c-ea59-490f-b7ce-5f0a35969370",
-          "collection": "/api/3/workflow_collections/ccd5c98d-34fd-4f3b-bae5-fecbf01285af",
+          "uuid": "76c6a93d-1eda-47e8-ac83-e512f0c4faf4",
+          "collection": "/api/3/workflow_collections/32d3eef5-7a07-48d7-9425-faa3b330af4f",
           "triggerLimit": null,
           "description": "List Groups for a domain. Groups can be filtered using member_types query parameter, which returns the groups that contains the specified member types.",
           "name": "Get Groups List",
@@ -365,16 +365,16 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/75a5db84-14bc-46e4-8224-f54f7be65a45",
+          "triggerStep": "/api/3/workflow_steps/bf229b49-8824-442b-bab6-0a60975d7f92",
           "steps": [
             {
-              "uuid": "75a5db84-14bc-46e4-8224-f54f7be65a45",
+              "uuid": "bf229b49-8824-442b-bab6-0a60975d7f92",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "5ec1cdf9-6540-4181-80bb-80aa0268e6d3",
+                "route": "62c50dba-a72b-40e4-a3e3-7cae4f6fef15",
                 "title": "VMware NSX-T: Get Groups List",
                 "resources": [
                   "alerts"
@@ -394,7 +394,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "17e7ece6-5e0f-4096-b1e9-ece4125c0dde",
+              "uuid": "8eb5f8c3-4ab7-4130-9c24-0426976ded2a",
               "@type": "WorkflowStep",
               "name": "Get Groups List",
               "description": null,
@@ -418,19 +418,19 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "bdc7e469-f6a9-41b3-abb3-cc1bd6f7fd42",
+              "uuid": "e7df1dcc-72bc-42d3-88dd-e8d8201b6d73",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Groups List",
-              "sourceStep": "/api/3/workflow_steps/75a5db84-14bc-46e4-8224-f54f7be65a45",
-              "targetStep": "/api/3/workflow_steps/17e7ece6-5e0f-4096-b1e9-ece4125c0dde"
+              "sourceStep": "/api/3/workflow_steps/bf229b49-8824-442b-bab6-0a60975d7f92",
+              "targetStep": "/api/3/workflow_steps/8eb5f8c3-4ab7-4130-9c24-0426976ded2a"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "f02cd1ed-bb03-4a69-9342-d066d7c296e0",
-          "collection": "/api/3/workflow_collections/ccd5c98d-34fd-4f3b-bae5-fecbf01285af",
+          "uuid": "645cdc6b-b63e-4760-83cf-b2e8b278238a",
+          "collection": "/api/3/workflow_collections/32d3eef5-7a07-48d7-9425-faa3b330af4f",
           "triggerLimit": null,
           "description": "Retrieves details of a specific group for a specific domain from VMware NSX-T based on the domain ID and group ID you have specified.",
           "name": "Get Group Details",
@@ -444,16 +444,16 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/476515a6-3583-409d-b3b9-e37e9a7ceee8",
+          "triggerStep": "/api/3/workflow_steps/7d05fbe5-66d0-4930-b4c5-1a66262e0447",
           "steps": [
             {
-              "uuid": "476515a6-3583-409d-b3b9-e37e9a7ceee8",
+              "uuid": "7d05fbe5-66d0-4930-b4c5-1a66262e0447",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "24bff4ba-e44d-4796-98bb-fa3e79f48960",
+                "route": "329ac564-e8bc-4f9e-abf2-c17b9dea127c",
                 "title": "VMware NSX-T: Get Group Details",
                 "resources": [
                   "alerts"
@@ -473,7 +473,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "b43562fb-45e8-428f-b6b7-7f512282f25a",
+              "uuid": "a8174936-62ed-4f3b-b16e-ea4d61be0159",
               "@type": "WorkflowStep",
               "name": "Get Group Details",
               "description": null,
@@ -495,19 +495,19 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "b343f446-5968-4ccd-af1b-813634cb46c1",
+              "uuid": "831043cf-948c-43cd-bd72-44bbc47b1b2c",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Group Details",
-              "sourceStep": "/api/3/workflow_steps/476515a6-3583-409d-b3b9-e37e9a7ceee8",
-              "targetStep": "/api/3/workflow_steps/b43562fb-45e8-428f-b6b7-7f512282f25a"
+              "sourceStep": "/api/3/workflow_steps/7d05fbe5-66d0-4930-b4c5-1a66262e0447",
+              "targetStep": "/api/3/workflow_steps/a8174936-62ed-4f3b-b16e-ea4d61be0159"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "dce679bf-6def-4be3-8820-558b889c68ad",
-          "collection": "/api/3/workflow_collections/ccd5c98d-34fd-4f3b-bae5-fecbf01285af",
+          "uuid": "5f5d0f2b-0e91-4b56-8962-de50e03d9baa",
+          "collection": "/api/3/workflow_collections/32d3eef5-7a07-48d7-9425-faa3b330af4f",
           "triggerLimit": null,
           "description": "Creates or Updates the group for the specified domain in VMware NSX-T based on the domain ID, group ID, and other input parameters (fields) you have specified. If a group for the given group-id is not present, then the group object gets created, and if it is present then the group object gets updated, i.e. it will get completely replaced.",
           "name": "Upsert Group",
@@ -521,16 +521,16 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/83427213-3c92-4993-a5ca-4d5ba3fbbfed",
+          "triggerStep": "/api/3/workflow_steps/e70f53f1-d3b0-48f7-a91d-1cdb9d376402",
           "steps": [
             {
-              "uuid": "83427213-3c92-4993-a5ca-4d5ba3fbbfed",
+              "uuid": "e70f53f1-d3b0-48f7-a91d-1cdb9d376402",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "0dcaa745-0c35-4acd-be7e-6ccae0ec6f4d",
+                "route": "5ca03433-824e-4ac0-b1ec-e13c9babeaee",
                 "title": "VMware NSX-T: Upsert Group",
                 "resources": [
                   "alerts"
@@ -550,7 +550,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "5f723c0a-e1c9-48fd-834f-a02397a160c4",
+              "uuid": "cd9754b4-b7e3-467f-9593-b06a1ebefc8b",
               "@type": "WorkflowStep",
               "name": "Upsert Group",
               "description": null,
@@ -588,19 +588,19 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "9f33b659-4ab3-4e7e-8310-0ad2ffebe395",
+              "uuid": "f1c422fd-461c-4ab6-b315-f5c0a16ae34e",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Upsert Group",
-              "sourceStep": "/api/3/workflow_steps/83427213-3c92-4993-a5ca-4d5ba3fbbfed",
-              "targetStep": "/api/3/workflow_steps/5f723c0a-e1c9-48fd-834f-a02397a160c4"
+              "sourceStep": "/api/3/workflow_steps/e70f53f1-d3b0-48f7-a91d-1cdb9d376402",
+              "targetStep": "/api/3/workflow_steps/cd9754b4-b7e3-467f-9593-b06a1ebefc8b"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "530f6580-6008-4aca-ba8e-14768e5822bb",
-          "collection": "/api/3/workflow_collections/ccd5c98d-34fd-4f3b-bae5-fecbf01285af",
+          "uuid": "35008205-ed33-4c4f-94ac-f451097fc0e6",
+          "collection": "/api/3/workflow_collections/32d3eef5-7a07-48d7-9425-faa3b330af4f",
           "triggerLimit": null,
           "description": "Deletes a specific group from the specified domain in VMware NSX-T based on the domain ID and group ID you have specified.",
           "name": "Delete Group",
@@ -614,16 +614,16 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/9856d944-5bcc-4cb3-a7cd-1d52d815b2e4",
+          "triggerStep": "/api/3/workflow_steps/0c8870e6-6f07-4f19-b1aa-ca69ac8d37af",
           "steps": [
             {
-              "uuid": "9856d944-5bcc-4cb3-a7cd-1d52d815b2e4",
+              "uuid": "0c8870e6-6f07-4f19-b1aa-ca69ac8d37af",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "092e09d6-842a-4908-b493-33e02293e5b5",
+                "route": "e2b0beab-02cf-48c6-b0ce-3dd7b99a704e",
                 "title": "VMware NSX-T: Delete Group",
                 "resources": [
                   "alerts"
@@ -643,7 +643,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "7446fcfb-3478-4b97-b795-58b664a17d17",
+              "uuid": "19706304-0e51-450a-94e6-60979092a4f9",
               "@type": "WorkflowStep",
               "name": "Delete Group",
               "description": null,
@@ -665,19 +665,19 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "61548163-811d-4934-90d4-da33d1443dda",
+              "uuid": "99765ef1-8c0b-41f6-bfe6-1d49f886cf0a",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Delete Group",
-              "sourceStep": "/api/3/workflow_steps/9856d944-5bcc-4cb3-a7cd-1d52d815b2e4",
-              "targetStep": "/api/3/workflow_steps/7446fcfb-3478-4b97-b795-58b664a17d17"
+              "sourceStep": "/api/3/workflow_steps/0c8870e6-6f07-4f19-b1aa-ca69ac8d37af",
+              "targetStep": "/api/3/workflow_steps/19706304-0e51-450a-94e6-60979092a4f9"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "c82a40d3-58c3-4743-94ca-28d230ede114",
-          "collection": "/api/3/workflow_collections/ccd5c98d-34fd-4f3b-bae5-fecbf01285af",
+          "uuid": "1e3f87a9-2e73-40e9-85c8-8e8db7009741",
+          "collection": "/api/3/workflow_collections/32d3eef5-7a07-48d7-9425-faa3b330af4f",
           "triggerLimit": null,
           "description": "Adds or removes the specified IP addresses from the specified expression of a group in VMware NSX-T based on the domain ID, group ID, expression ID, and other input parameters you have specified.",
           "name": "Add/Remove IP Addresses",
@@ -691,16 +691,16 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/ff8abfca-0711-43a9-b222-e435cff3ce5e",
+          "triggerStep": "/api/3/workflow_steps/70d8b379-db33-48cd-b729-390b035d6ac1",
           "steps": [
             {
-              "uuid": "ff8abfca-0711-43a9-b222-e435cff3ce5e",
+              "uuid": "70d8b379-db33-48cd-b729-390b035d6ac1",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "4a0a4c1d-cecf-4687-97e4-c995769105ff",
+                "route": "0fe82e60-65cc-4c9f-a043-dc9ad07638bc",
                 "title": "VMware NSX-T: Add/Remove IP Addresses",
                 "resources": [
                   "alerts"
@@ -720,7 +720,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "ddc46e57-ff70-4f19-8ead-46ed9af469a7",
+              "uuid": "4671e0c7-181d-4d9f-a0b5-58e345a23fa6",
               "@type": "WorkflowStep",
               "name": "Add/Remove IP Addresses",
               "description": null,
@@ -744,19 +744,19 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "a40dfd15-21e0-4d5c-b0ab-2389845d882d",
+              "uuid": "d4921aaa-9cfd-4c1b-8dc9-dffee37f43ea",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Add/Remove IP Addresses",
-              "sourceStep": "/api/3/workflow_steps/ff8abfca-0711-43a9-b222-e435cff3ce5e",
-              "targetStep": "/api/3/workflow_steps/ddc46e57-ff70-4f19-8ead-46ed9af469a7"
+              "sourceStep": "/api/3/workflow_steps/70d8b379-db33-48cd-b729-390b035d6ac1",
+              "targetStep": "/api/3/workflow_steps/4671e0c7-181d-4d9f-a0b5-58e345a23fa6"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "1c78ddee-0055-4357-aa0d-88be8ab440cf",
-          "collection": "/api/3/workflow_collections/ccd5c98d-34fd-4f3b-bae5-fecbf01285af",
+          "uuid": "57bf9bc2-e9a5-4358-883c-497a689f25a6",
+          "collection": "/api/3/workflow_collections/32d3eef5-7a07-48d7-9425-faa3b330af4f",
           "triggerLimit": null,
           "description": "Adds or removes the specified MAC addresses from the specified expression of a group in VMware NSX-T based on the domain ID, group ID, expression ID, and other input parameters you have specified.",
           "name": "Add/Remove MAC Addresses",
@@ -770,16 +770,16 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/737e9497-92d1-4621-ad2c-9a68903f6542",
+          "triggerStep": "/api/3/workflow_steps/9c0fffee-55da-4906-8bd5-60844c3e4330",
           "steps": [
             {
-              "uuid": "737e9497-92d1-4621-ad2c-9a68903f6542",
+              "uuid": "9c0fffee-55da-4906-8bd5-60844c3e4330",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "dc207157-0e6b-41cb-9e2b-a666f28a343d",
+                "route": "52c6e606-f569-4cd7-92d1-bf5564503e06",
                 "title": "VMware NSX-T: Add/Remove MAC Addresses",
                 "resources": [
                   "alerts"
@@ -799,7 +799,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "d7d2db23-5187-4983-8e68-74aea2124f0b",
+              "uuid": "257bfb9a-2385-497c-bbb8-c8dd6ac099a4",
               "@type": "WorkflowStep",
               "name": "Add/Remove MAC Addresses",
               "description": null,
@@ -821,19 +821,19 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "c5b62700-cd26-4df1-a5e3-48b1e66b552e",
+              "uuid": "243987ff-0dbd-4719-9e07-814a0ea84fe7",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Add/Remove MAC Addresses",
-              "sourceStep": "/api/3/workflow_steps/737e9497-92d1-4621-ad2c-9a68903f6542",
-              "targetStep": "/api/3/workflow_steps/d7d2db23-5187-4983-8e68-74aea2124f0b"
+              "sourceStep": "/api/3/workflow_steps/9c0fffee-55da-4906-8bd5-60844c3e4330",
+              "targetStep": "/api/3/workflow_steps/257bfb9a-2385-497c-bbb8-c8dd6ac099a4"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "023db46c-5158-4720-bad5-5b92450b87fe",
-          "collection": "/api/3/workflow_collections/ccd5c98d-34fd-4f3b-bae5-fecbf01285af",
+          "uuid": "ffdbe93c-22e3-413d-8e11-efb93227cd09",
+          "collection": "/api/3/workflow_collections/32d3eef5-7a07-48d7-9425-faa3b330af4f",
           "triggerLimit": null,
           "description": "Retrieves a list of all the firewall rules for a specific domain from VMware NSX-T based on the domain ID, policy ID, and rule ID you have specified.",
           "name": "Get Rules List",
@@ -847,16 +847,16 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/1c70d0e8-7ebb-4fe1-92a1-d22bf7c627f8",
+          "triggerStep": "/api/3/workflow_steps/ef665e82-bdaa-4531-8932-c0acbe4717dc",
           "steps": [
             {
-              "uuid": "1c70d0e8-7ebb-4fe1-92a1-d22bf7c627f8",
+              "uuid": "ef665e82-bdaa-4531-8932-c0acbe4717dc",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "d6278960-c6c9-4195-a3fd-c3e4663ac3c8",
+                "route": "0138f823-25d5-4f03-b06f-90e909ed7201",
                 "title": "VMware NSX-T: Get Rules List",
                 "resources": [
                   "alerts"
@@ -876,7 +876,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "27b65c11-a3ef-4f2d-b77b-13c3a68eedd9",
+              "uuid": "1dafe0e0-7da7-4b70-8b54-fb5a71acfd76",
               "@type": "WorkflowStep",
               "name": "Get Rules List",
               "description": null,
@@ -900,19 +900,19 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "9ec295b5-6127-49fc-a44e-fa847e2051d3",
+              "uuid": "bda5c082-c18f-4342-8ea7-0dd8fa7092c0",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Rules List",
-              "sourceStep": "/api/3/workflow_steps/1c70d0e8-7ebb-4fe1-92a1-d22bf7c627f8",
-              "targetStep": "/api/3/workflow_steps/27b65c11-a3ef-4f2d-b77b-13c3a68eedd9"
+              "sourceStep": "/api/3/workflow_steps/ef665e82-bdaa-4531-8932-c0acbe4717dc",
+              "targetStep": "/api/3/workflow_steps/1dafe0e0-7da7-4b70-8b54-fb5a71acfd76"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "6718dde5-2403-4a5d-8baa-4ecf48084ab0",
-          "collection": "/api/3/workflow_collections/ccd5c98d-34fd-4f3b-bae5-fecbf01285af",
+          "uuid": "9093343e-8857-4a9c-b7cb-882a656950ee",
+          "collection": "/api/3/workflow_collections/32d3eef5-7a07-48d7-9425-faa3b330af4f",
           "triggerLimit": null,
           "description": "Retrieves details of a specific firewall for a specific domain from VMware NSX-T based on the domain ID and group ID you have specified.",
           "name": "Get Rule Details",
@@ -926,16 +926,16 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/14ebe44d-f44f-445d-8c22-faa1677dbb8e",
+          "triggerStep": "/api/3/workflow_steps/3e00faa5-5b10-452a-a4f3-41ff4ad793d5",
           "steps": [
             {
-              "uuid": "14ebe44d-f44f-445d-8c22-faa1677dbb8e",
+              "uuid": "3e00faa5-5b10-452a-a4f3-41ff4ad793d5",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "bc6dddf7-7749-4fd6-9a5b-e09d9214ae0c",
+                "route": "d9f5b7d8-642b-4cc7-875d-6c93da50e200",
                 "title": "VMware NSX-T: Get Rule Details",
                 "resources": [
                   "alerts"
@@ -955,7 +955,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "6d53b780-3302-468b-ad8c-e2adc453b630",
+              "uuid": "2c618dd8-2315-4d89-82dc-b0d1b290afda",
               "@type": "WorkflowStep",
               "name": "Get Rule Details",
               "description": null,
@@ -977,19 +977,19 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "a36e8ca8-3e50-4202-918a-2243a2586bcb",
+              "uuid": "df3de688-5f31-42f7-a71c-0b9d6d7d0dd0",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Rule Details",
-              "sourceStep": "/api/3/workflow_steps/14ebe44d-f44f-445d-8c22-faa1677dbb8e",
-              "targetStep": "/api/3/workflow_steps/6d53b780-3302-468b-ad8c-e2adc453b630"
+              "sourceStep": "/api/3/workflow_steps/3e00faa5-5b10-452a-a4f3-41ff4ad793d5",
+              "targetStep": "/api/3/workflow_steps/2c618dd8-2315-4d89-82dc-b0d1b290afda"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "e89d27fb-08c2-4fcd-945c-2f832841abbd",
-          "collection": "/api/3/workflow_collections/ccd5c98d-34fd-4f3b-bae5-fecbf01285af",
+          "uuid": "64ccc404-4494-4fb7-8d58-cad779f37135",
+          "collection": "/api/3/workflow_collections/32d3eef5-7a07-48d7-9425-faa3b330af4f",
           "triggerLimit": null,
           "description": "Creates or Updates the firewall rule for the specified domain and policy in VMware NSX-T based on the domain ID, policy ID, rule ID, and other input parameters you have specified. If a group for the given rule-id is not present, then the rule object gets created, and if it is present then the rule object gets updated, i.e. it will get completely replaced.",
           "name": "Upsert Rule",
@@ -1003,16 +1003,16 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/cbc2bed4-939a-4f8e-b8e0-48e1128deffb",
+          "triggerStep": "/api/3/workflow_steps/4a78d468-e323-49ac-94c2-e1dd7cc8f62a",
           "steps": [
             {
-              "uuid": "cbc2bed4-939a-4f8e-b8e0-48e1128deffb",
+              "uuid": "4a78d468-e323-49ac-94c2-e1dd7cc8f62a",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "3110b5a0-011c-4f37-9600-b188944c40fa",
+                "route": "04cb00b7-cfe4-47ef-ad22-8348d3fb38a1",
                 "title": "VMware NSX-T: Upsert Rule",
                 "resources": [
                   "alerts"
@@ -1032,7 +1032,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "1c79ee28-c4fc-44bd-9657-db45b4f5187b",
+              "uuid": "6286e0c3-1d4c-42b1-b0c9-d830ce4df3a1",
               "@type": "WorkflowStep",
               "name": "Upsert Rule",
               "description": null,
@@ -1063,19 +1063,19 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "6cafb8b6-7e0e-4598-88a5-df4d5270ab1d",
+              "uuid": "bcc72b29-5b5c-4dd3-a636-ee6fc3615109",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Upsert Rule",
-              "sourceStep": "/api/3/workflow_steps/cbc2bed4-939a-4f8e-b8e0-48e1128deffb",
-              "targetStep": "/api/3/workflow_steps/1c79ee28-c4fc-44bd-9657-db45b4f5187b"
+              "sourceStep": "/api/3/workflow_steps/4a78d468-e323-49ac-94c2-e1dd7cc8f62a",
+              "targetStep": "/api/3/workflow_steps/6286e0c3-1d4c-42b1-b0c9-d830ce4df3a1"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "045d29be-ca9e-4672-99d6-2c7ae8d1926e",
-          "collection": "/api/3/workflow_collections/ccd5c98d-34fd-4f3b-bae5-fecbf01285af",
+          "uuid": "b00ee2f1-9b64-49b6-85e4-37d245213bac",
+          "collection": "/api/3/workflow_collections/32d3eef5-7a07-48d7-9425-faa3b330af4f",
           "triggerLimit": null,
           "description": "Deletes a specific rule from the specified domain and policy in VMware NSX-T based on the domain ID, policy ID, and rule ID you have specified.",
           "name": "Delete Rule",
@@ -1089,16 +1089,16 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/cb89092c-355f-43c1-93c6-ada58bf38c43",
+          "triggerStep": "/api/3/workflow_steps/d7adb68b-7f81-44a4-86b9-f8c4542b5a3f",
           "steps": [
             {
-              "uuid": "cb89092c-355f-43c1-93c6-ada58bf38c43",
+              "uuid": "d7adb68b-7f81-44a4-86b9-f8c4542b5a3f",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "9758c2ad-cdc2-409b-8371-81e14377e2d1",
+                "route": "e0bee186-40fc-41de-b424-d3c747db0962",
                 "title": "VMware NSX-T: Delete Rule",
                 "resources": [
                   "alerts"
@@ -1118,7 +1118,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "ce9bb396-f5e5-4119-a460-cea5e6065c2e",
+              "uuid": "fd7edcad-b113-44fa-9ecd-9e9aaf78dd94",
               "@type": "WorkflowStep",
               "name": "Delete Rule",
               "description": null,
@@ -1140,21 +1140,21 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "a8be53aa-ce97-4434-9306-3502b4dc30c3",
+              "uuid": "ffa8c0a4-be65-46bd-a032-7d43def35cec",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Delete Rule",
-              "sourceStep": "/api/3/workflow_steps/cb89092c-355f-43c1-93c6-ada58bf38c43",
-              "targetStep": "/api/3/workflow_steps/ce9bb396-f5e5-4119-a460-cea5e6065c2e"
+              "sourceStep": "/api/3/workflow_steps/d7adb68b-7f81-44a4-86b9-f8c4542b5a3f",
+              "targetStep": "/api/3/workflow_steps/fd7edcad-b113-44fa-9ecd-9e9aaf78dd94"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "e1c868e1-0f75-436a-a6bd-2654d2ae424c",
-          "collection": "/api/3/workflow_collections/ccd5c98d-34fd-4f3b-bae5-fecbf01285af",
+          "uuid": "8fa42385-9ce2-4250-a33f-cb6367644224",
+          "collection": "/api/3/workflow_collections/32d3eef5-7a07-48d7-9425-faa3b330af4f",
           "triggerLimit": null,
-          "description": "Add, update , delete tags for a Virtual Machine",
+          "description": "Adds, updates, or deletes tags for a specific Virtual Machine(VM) based on the external ID of the VM, tag, scope, and action you have specified. ",
           "name": "Manage VM TAG",
           "tag": "#VMware NSX-T",
           "recordTags": [
@@ -1166,16 +1166,16 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/701ebdd5-0240-4d72-9739-5f747e8f321d",
+          "triggerStep": "/api/3/workflow_steps/844f8e9c-873f-473a-986e-07c56073ff2a",
           "steps": [
             {
-              "uuid": "701ebdd5-0240-4d72-9739-5f747e8f321d",
+              "uuid": "844f8e9c-873f-473a-986e-07c56073ff2a",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "f8edc370-4567-4455-a86d-af18b0bf0a14",
+                "route": "7e06a952-06f6-4b67-a9ab-436f1b890732",
                 "title": "VMware NSX-T: Manage VM TAG",
                 "resources": [
                   "alerts"
@@ -1195,7 +1195,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "e4e260dc-7929-4fbe-ab78-77eb12d80f73",
+              "uuid": "3a64efdc-e7c2-4d4a-a692-712daa57653d",
               "@type": "WorkflowStep",
               "name": "Manage VM TAG",
               "description": null,
@@ -1217,12 +1217,12 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "c67b344c-5039-4d73-9e00-a9a4f39462c7",
+              "uuid": "758b6c35-6c2b-40cd-bad2-f0850c821a2a",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Manage VM TAG",
-              "sourceStep": "/api/3/workflow_steps/701ebdd5-0240-4d72-9739-5f747e8f321d",
-              "targetStep": "/api/3/workflow_steps/e4e260dc-7929-4fbe-ab78-77eb12d80f73"
+              "sourceStep": "/api/3/workflow_steps/844f8e9c-873f-473a-986e-07c56073ff2a",
+              "targetStep": "/api/3/workflow_steps/3a64efdc-e7c2-4d4a-a692-712daa57653d"
             }
           ]
         }
