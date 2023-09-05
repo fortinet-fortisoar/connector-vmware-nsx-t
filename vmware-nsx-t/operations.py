@@ -286,10 +286,22 @@ def manage_vm_tag(config, params):
         elif vm_tag_update_action == 'UPDATE':
             endpoint = f"/api/v1/fabric/virtual-machines?action={action_dict['UPDATE']}"
         params_dict = {"external_id": external_id, "tags": [{"scope": vm_scope, "tag": vm_tag}]}
-        resp = nsx.make_rest_call(endpoint, payload=params_dict, method='POST')
+        resp = nsx.make_rest_call(endpoint, payload=json.dumps(params_dict, indent = 4), method='POST')
+        return json.dumps(resp)
     except Exception as Err:
         logger.error(Err)
         raise ConnectorError(Err)
+    
+def get_vm_externalID(config, params):
+    try:
+      nsx = VMwareNSXT(config)
+      vm_name = params.get('vm_name')
+      endpoint = f"/api/v1/fabric/virtual-machines?display_name={vm_name}&included_fields=tags&included_fields=external_id"
+      resp = nsx.make_rest_call(endpoint, method='GET')
+      return json.dumps(resp)
+    except Exception as Err:
+      logger.error(Err)
+      raise ConnectorError(Err)
 
 
 def _check_health(config):
@@ -316,7 +328,8 @@ operations = {
     'get_rule_details': get_rule_details,
     'upsert_rule': upsert_rule,
     'delete_rule': delete_rule,
-    'manage_vm_tag': manage_vm_tag
+    'manage_vm_tag': manage_vm_tag,
+    'get_vm_externalID': get_vm_externalID
 
 }
 

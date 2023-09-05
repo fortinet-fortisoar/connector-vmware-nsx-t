@@ -1339,6 +1339,27 @@
           "status": "",
           "result": ""
       }
+    },
+    {
+      "operation": "get_vm_externalID",
+      "title": "Get VM External ID",
+      "category": "miscellaneous",
+      "annotation": "get_vm_externalID",
+      "description": "Gets external id of a given VM name. ",
+      "parameters": [
+          {
+              "title": "VM name",
+              "name": "vm_name",
+              "type": "text",
+              "tooltip": "Specify the name of VM.",
+              "description": "Specify the ethe name of VM.",
+              "required": true,
+              "editable": true,
+              "visible": true
+          }
+      ],
+      "enabled": true,
+      "output_schema": {}
     }
   ]
 }
