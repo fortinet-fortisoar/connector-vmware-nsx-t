@@ -2,7 +2,7 @@
   "name": "vmware-nsx-t",
   "label": "VMware NSX-T",
   "description": "VMware NSX-T Data Center focuses on providing networking, security, automation, and operational simplicity for emerging application frameworks and architectures that have heterogeneous endpoint environments and technology stacks. This Connector automated operations such as create, update and delete operation related to policy, rule, group etc.",
-  "publisher": "Fortinet",
+  "publisher": "Community",
   "cs_approved": false,
   "cs_compatible": true,
   "version": "1.1.0",

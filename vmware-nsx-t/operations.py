@@ -38,6 +38,7 @@ class VMwareNSXT(object):
             logger.debug('API Status Code: {0}'.format(response.status_code))
             logger.debug('API Response content: {0}'.format(response.content))
             logger.debug('API Response: {0}'.format(response.text))
+            
             if response.status_code == 204 and response.ok:
                 return {'status': 'success', 'result': 'Policy created/updated successfully.'}
             elif response.status_code == 200 and response.ok:
@@ -294,7 +295,7 @@ def manage_vm_tag(config, params):
     except Exception as Err:
         logger.error(Err)
         raise ConnectorError(Err)
-    
+
 def get_vm_externalID(config, params):
     try:
       nsx = VMwareNSXT(config)
@@ -331,8 +332,6 @@ operations = {
     'get_rule_details': get_rule_details,
     'upsert_rule': upsert_rule,
     'delete_rule': delete_rule,
-    'manage_vm_tag': manage_vm_tag,
-    'get_vm_externalID': get_vm_externalID
-
+    'get_vm_externalID': get_vm_externalID,
+    'manage_vm_tag': manage_vm_tag
 }
-
