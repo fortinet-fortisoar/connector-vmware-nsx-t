@@ -34,10 +34,13 @@ class VMwareNSXT(object):
         credentials = (self.username, self.password)
         try:
             response = requests.request(method, service_endpoint, auth=credentials, params=params, data=payload,
-                                        verify=self.verify_ssl)
+                                        verify=self.verify_ssl, headers={"content-type":"application/json", "Accept" : "application/json"})
             logger.debug('API Status Code: {0}'.format(response.status_code))
+            logger.debug('API Response content: {0}'.format(response.content))
             logger.debug('API Response: {0}'.format(response.text))
-            if response.ok:
+            if response.status_code == 204 and response.ok:
+                return {'status': 'success', 'result': 'Policy created/updated successfully.'}
+            elif response.status_code == 200 and response.ok:
                 return json.loads(response.content.decode('utf-8'))
             else:
                 if error_msg.get(response.status_code):
