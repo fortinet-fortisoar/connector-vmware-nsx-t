@@ -1352,7 +1352,7 @@
               "name": "vm_name",
               "type": "text",
               "tooltip": "Specify the name of VM.",
-              "description": "Specify the ethe name of VM.",
+              "description": "Specify the name of VM.",
               "required": true,
               "editable": true,
               "visible": true
