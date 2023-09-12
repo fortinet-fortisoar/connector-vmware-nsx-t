@@ -34,10 +34,14 @@ class VMwareNSXT(object):
         credentials = (self.username, self.password)
         try:
             response = requests.request(method, service_endpoint, auth=credentials, params=params, data=payload,
-                                        verify=self.verify_ssl)
+                                        verify=self.verify_ssl, headers={"content-type":"application/json", "Accept" : "application/json"})
             logger.debug('API Status Code: {0}'.format(response.status_code))
+            logger.debug('API Response content: {0}'.format(response.content))
             logger.debug('API Response: {0}'.format(response.text))
-            if response.ok:
+            
+            if response.status_code == 204 and response.ok:
+                return {'status': 'success', 'result': 'Policy created/updated successfully.'}
+            elif response.status_code == 200 and response.ok:
                 return json.loads(response.content.decode('utf-8'))
             else:
                 if error_msg.get(response.status_code):
@@ -286,10 +290,22 @@ def manage_vm_tag(config, params):
         elif vm_tag_update_action == 'UPDATE':
             endpoint = f"/api/v1/fabric/virtual-machines?action={action_dict['UPDATE']}"
         params_dict = {"external_id": external_id, "tags": [{"scope": vm_scope, "tag": vm_tag}]}
-        resp = nsx.make_rest_call(endpoint, payload=params_dict, method='POST')
+        resp = nsx.make_rest_call(endpoint, payload=json.dumps(params_dict, indent = 4), method='POST')
+        return json.dumps(resp)
     except Exception as Err:
         logger.error(Err)
         raise ConnectorError(Err)
+
+def get_vm_externalID(config, params):
+    try:
+      nsx = VMwareNSXT(config)
+      vm_name = params.get('vm_name')
+      endpoint = f"/api/v1/fabric/virtual-machines?display_name={vm_name}&included_fields=tags&included_fields=external_id"
+      resp = nsx.make_rest_call(endpoint, method='GET')
+      return json.dumps(resp)
+    except Exception as Err:
+      logger.error(Err)
+      raise ConnectorError(Err)
 
 
 def _check_health(config):
@@ -316,7 +332,6 @@ operations = {
     'get_rule_details': get_rule_details,
     'upsert_rule': upsert_rule,
     'delete_rule': delete_rule,
+    'get_vm_externalID': get_vm_externalID,
     'manage_vm_tag': manage_vm_tag
-
 }
-

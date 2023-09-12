@@ -1,3 +1,4 @@
 #### What's Improved
 
-- Added a new action named 'Manage VM TAG'. 
+- Fixed the issue with 'Manage VM TAG'.
+- Added a new action named 'Get VM External ID'. 
