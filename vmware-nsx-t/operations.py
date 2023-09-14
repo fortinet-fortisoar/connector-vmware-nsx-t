@@ -34,7 +34,7 @@ class VMwareNSXT(object):
         credentials = (self.username, self.password)
         try:
             response = requests.request(method, service_endpoint, auth=credentials, params=params, data=payload,
-                                        verify=self.verify_ssl, headers={"content-type":"application/json", "Accept" : "application/json"})
+                                        verify=self.verify_ssl, headers={"content-type": "application/json", "Accept": "application/json"}, timeout=600)
             logger.debug('API Status Code: {0}'.format(response.status_code))
             logger.debug('API Response content: {0}'.format(response.content))
             logger.debug('API Response: {0}'.format(response.text))
@@ -296,16 +296,17 @@ def manage_vm_tag(config, params):
         logger.error(Err)
         raise ConnectorError(Err)
 
+
 def get_vm_externalID(config, params):
     try:
-      nsx = VMwareNSXT(config)
-      vm_name = params.get('vm_name')
-      endpoint = f"/api/v1/fabric/virtual-machines?display_name={vm_name}&included_fields=tags&included_fields=external_id"
-      resp = nsx.make_rest_call(endpoint, method='GET')
-      return json.dumps(resp)
+        nsx = VMwareNSXT(config)
+        vm_name = params.get('vm_name')
+        endpoint = f"/api/v1/fabric/virtual-machines?display_name={vm_name}&included_fields=tags&included_fields=external_id"
+        resp = nsx.make_rest_call(endpoint, method='GET')
+        return json.dumps(resp)
     except Exception as Err:
-      logger.error(Err)
-      raise ConnectorError(Err)
+        logger.error(Err)
+        raise ConnectorError(Err)
 
 
 def _check_health(config):
