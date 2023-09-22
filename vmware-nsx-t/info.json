@@ -7,7 +7,7 @@
   "cs_compatible": true,
   "version": "1.2.0",
   "category": "Network Security",
-  "help_online": "",
+  "help_online": "https://docs.fortinet.com/document/fortisoar/1.2.0/vmware-nsx-t/689/vmware-nsx-t-v1-2-0",
   "icon_small_name": "small.png",
   "icon_large_name": "large.png",
   "configuration": {

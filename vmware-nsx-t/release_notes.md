@@ -1,4 +1,4 @@
 #### What's Improved
 
-- Fixed the issue with 'Manage VM TAG'.
-- Added a new action named 'Get VM External ID'. 
+- Fixed the Manage VM TAG action so the request/payload is now sent as a JSON string. 
+- Added a new Get VM External ID action.
